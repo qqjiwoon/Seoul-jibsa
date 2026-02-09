@@ -5,9 +5,9 @@ import {
   sendVerificationCode,
   verifyCode,
   registerUser,
-} from "../api/AuthApi";
+} from "../../api/AuthApi";
 import axios from "axios";
-import { useUIStore } from "../store/uiStore";
+import { useUIStore } from "../../store/uiStore";
 
 export default function SignupPage() {
   const navigate = useNavigate();
