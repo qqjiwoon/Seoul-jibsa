@@ -7,7 +7,7 @@ interface NoticeWithSummary extends Notice {
   summary: string | null;
 }
 
-import NotFoundPage from "../pages/NotFoundPage";
+import NotFoundPage from "./NotFoundPage";
 
 import NoticeDetailHeader from "../components/noticeDetail/NoticeDetailHeader";
 import NoticeOverviewCard from "../components/noticeDetail/NoticeOverviewCard";

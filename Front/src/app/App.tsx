@@ -9,12 +9,17 @@ import ProtectedRoute from "../components/auth/ProtectedRoute";
 import ScrollToTop from "../components/common/ScrollToTop";
 import AlertModal from "../components/modals/AlertModal";
 
+// Auth
+import LoginPage from "../pages/Auth/LoginPage";
+import SignupPage from "../pages/Auth/SignupPage";
+import RecoverIdPage from "../pages/Auth/RecoverIdPage";
+import RecoverPasswordPage from "../pages/Auth/RecoverPasswordPage";
+import ResetPasswordPage from "../pages/Auth/ResetPasswordPage";
+
 // 일반 페이지
 import HomePage from "../pages/HomePage";
 import NoticesPage from "../pages/NoticesPage";
 import NoticeDetailPage from "../pages/NoticeDetailPage";
-import LoginPage from "../pages/LoginPage";
-import SignupPage from "../pages/SignupPage";
 import MyPage from "../pages/MyPage";
 import SocialCallback from "../pages/SocialCallback";
 
@@ -60,6 +65,9 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/oauth/callback" element={<SocialCallback />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/recovery/id" element={<RecoverIdPage />} />
+            <Route path="/recovery/password" element={<RecoverPasswordPage />} />
+            <Route path="/recovery/password/reset" element={<ResetPasswordPage />} />
             
             {/* 관리자 페이지 */}
             <Route path="/admin/notices/create" element={<NoticeCreatePage />} />

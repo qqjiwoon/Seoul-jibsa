@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import GoogleButton from "../components/login/GoogleButton";
-import KakaoButton from "../components/login/KakaoButton";
-import { login as loginAPI } from "../api/AuthApi";
-import { useAuth } from "../context/AuthContext";
-import { useUIStore } from "../store/uiStore";
+import GoogleButton from "../../components/login/GoogleButton";
+import KakaoButton from "../../components/login/KakaoButton";
+import { login as loginAPI } from "../../api/AuthApi";
+import { useAuth } from "../../context/AuthContext";
+import { useUIStore } from "../../store/uiStore";
 
 const baseURL = "/api";
 
@@ -130,14 +130,15 @@ export default function LoginPage() {
           </button>
 
           <div className="flex items-center justify-center gap-4 text-xs text-gray-500 font-medium pt-2">
-            <button type="button" className="hover:text-primary transition-colors">
+            <Link to="/recovery/id" className="hover:text-primary transition-colors">
               아이디 찾기
-            </button>
+            </Link>
             <div className="w-px h-3 bg-gray-300"></div>
-            <button type="button" className="hover:text-primary transition-colors">
+            <Link to="/recovery/password" className="hover:text-primary transition-colors">
               비밀번호 찾기
-            </button>
+            </Link>
           </div>
+
         </form>
 
         {/* 소셜 로그인 */}

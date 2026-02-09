@@ -1,5 +1,11 @@
+// Front\src\api\AuthApi.ts
 import { apiClient } from "./axiosConfig"; // Axios 인스턴스
-import { type User } from "../types/auth"; // User 인터페이스
+import type { User,
+  RecoverIdResponse,
+  RecoverPasswordEmailRequest,
+  RecoverPasswordResponse,
+  ResetPasswordRequest,
+ } from "../types/auth"; // User 인터페이스
 
 const BASE_URL = "/api";
 
@@ -168,4 +174,35 @@ export const refreshTokenAPI = async () => {
     console.error("토큰 재발급 실패:", error);
     throw error;
   }
+};
+
+// 아이디 찾기(이메일 주소 검증)
+export const recoverLoginId = async (email: string): Promise<RecoverIdResponse> => {
+  const res = await apiClient.post<RecoverIdResponse>(
+    "/auth/recovery/id",
+    { email }
+  );
+  return res.data;
+};
+
+// 비밀번호 재설정 이메일 전송
+export const sendPasswordRecoveryEmail = async (
+  payload: RecoverPasswordEmailRequest
+): Promise<RecoverPasswordResponse> => {
+  const res = await apiClient.post<RecoverPasswordResponse>(
+    "/auth/recovery/password",
+    payload
+  );
+  return res.data;
+};
+
+// 비밀번호 재설정(변경)
+export const resetPassword = async (
+  payload: ResetPasswordRequest
+): Promise<RecoverPasswordResponse> => {
+  const res = await apiClient.patch<RecoverPasswordResponse>(
+    "/auth/recovery/password",
+    payload
+  );
+  return res.data;
 };
