@@ -88,7 +88,7 @@
 <div id="6"></div>
 
 ## 🎥 소개 영상(클릭 후 5~10초 대기)
-- [소개 영상 보기](Docs/videos/intro.mp4)
+- [소개 영상 보기](https://drive.google.com/file/d/1KVuW7RyOC8lmf31r4VDsdxxxjAl5AnyE/view?usp=sharing)
 
 
 ## 👪 팀원 소개
