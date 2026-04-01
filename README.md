@@ -97,7 +97,7 @@
   <tr>
     <td align="center" width="150px">
       <a href="https://github.com/mingy1206" target="_blank">
-        <img src="Docs/images/team1.png" alt="이민기 프로필" />
+        <!-- <img src="Docs/images/team1.png" alt="이민기 프로필" /> -->
       </a>
     </td>
     <td align="center" width="150px">
