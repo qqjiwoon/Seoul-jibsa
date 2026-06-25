@@ -88,12 +88,11 @@
 <div id="6"></div>
 
 ## 🎥 소개 영상(클릭 후 5~10초 대기)
+
 - [소개 영상 보기](https://drive.google.com/file/d/1KVuW7RyOC8lmf31r4VDsdxxxjAl5AnyE/view?usp=sharing)
 
 
 ## 👪 팀원 소개
-
-<br />
 
 | 이름 | 역할 | 주요 수행 내용 |
 |---|---|---|
